@@ -101,6 +101,7 @@ export default function Home() {
   const [data, setData] = useState<JobsFile | null>(null);
   const [filter, setFilter] = useState<JobType | "all">("all");
   const [categoryFilter, setCategoryFilter] = useState<JobCategory | "all">("all");
+  const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -155,17 +156,22 @@ export default function Home() {
   );
 
   const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
     const list = jobs.filter((j) => {
       if (filter !== "all" && j.type !== filter) return false;
       if (categoryFilter !== "all" && (j.category ?? "other") !== categoryFilter)
         return false;
+      if (q) {
+        const haystack = `${j.company} ${j.title} ${j.description} ${j.location}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
       return true;
     });
     return [...list].sort((a, b) => {
       if (a.featured !== b.featured) return a.featured ? -1 : 1;
       return new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime();
     });
-  }, [jobs, filter, categoryFilter]);
+  }, [jobs, filter, categoryFilter, query]);
 
   return (
     <div className="flex-1 flex flex-col">
@@ -225,6 +231,29 @@ export default function Home() {
               label="FEATURED"
               swatch="var(--accent-green)"
             />
+          </div>
+        </div>
+
+        <div className="border-t-2 border-[var(--line)] py-4 flex items-center gap-3">
+          <span className="inline-block h-2.5 w-2.5 border border-[var(--line)] bg-[var(--accent-tan)] shrink-0" />
+          <span className="text-xs tracking-widest mr-1 shrink-0">SEARCH</span>
+          <div className="relative flex-1 max-w-xl">
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by role, company, or location…"
+              className="w-full border-2 border-[var(--line)] bg-[var(--panel)] px-4 py-2 text-sm outline-none focus:bg-white transition-colors"
+            />
+            {query && (
+              <button
+                onClick={() => setQuery("")}
+                aria-label="Clear search"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-[var(--ink)] text-sm font-bold px-1"
+              >
+                ×
+              </button>
+            )}
           </div>
         </div>
 
