@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh public/jobs.json from public job boards."""
+"""Refresh public/jobs.json from public job boards every six hours."""
 from __future__ import annotations
 
 import argparse, colorsys, hashlib, json, logging, os, re, tempfile
