@@ -11,6 +11,19 @@ const TYPES = [
   { value: "fellowship", label: "FELLOWSHIP" },
 ];
 
+const CATEGORIES = [
+  { value: "engineering", label: "ENGINEERING" },
+  { value: "product", label: "PRODUCT" },
+  { value: "design", label: "DESIGN" },
+  { value: "marketing", label: "MARKETING" },
+  { value: "sales-partnerships", label: "SALES & PARTNERSHIPS" },
+  { value: "operations", label: "OPERATIONS" },
+  { value: "finance-legal", label: "FINANCE & LEGAL" },
+  { value: "research", label: "RESEARCH" },
+  { value: "community-devrel", label: "COMMUNITY & DEVREL" },
+  { value: "other", label: "OTHER" },
+];
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function SubmitJob() {
@@ -29,6 +42,7 @@ export default function SubmitJob() {
       title: data.get("title"),
       description: data.get("description"),
       type: data.get("type"),
+      category: data.get("category"),
       location: data.get("location"),
       comp: data.get("comp"),
       url: data.get("url"),
@@ -163,6 +177,24 @@ export default function SubmitJob() {
                 {TYPES.map((t) => (
                   <option key={t.value} value={t.value}>
                     {t.label}
+                  </option>
+                ))}
+              </select>
+            </Field>
+
+            <Field label="ROLE CATEGORY *">
+              <select
+                required
+                name="category"
+                defaultValue=""
+                className="input"
+              >
+                <option value="" disabled>
+                  Select a category
+                </option>
+                {CATEGORIES.map((c) => (
+                  <option key={c.value} value={c.value}>
+                    {c.label}
                   </option>
                 ))}
               </select>

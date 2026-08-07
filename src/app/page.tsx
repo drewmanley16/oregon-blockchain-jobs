@@ -9,6 +9,18 @@ type JobType =
   | "contract"
   | "fellowship";
 
+type JobCategory =
+  | "engineering"
+  | "product"
+  | "design"
+  | "marketing"
+  | "sales-partnerships"
+  | "operations"
+  | "finance-legal"
+  | "research"
+  | "community-devrel"
+  | "other";
+
 type Job = {
   id: string;
   company: string;
@@ -17,6 +29,7 @@ type Job = {
   title: string;
   description: string;
   type: JobType;
+  category?: JobCategory;
   featured: boolean;
   location: string;
   comp: string;
@@ -47,6 +60,33 @@ const TYPE_LABEL: Record<JobType, string> = {
   fellowship: "FELLOWSHIP",
 };
 
+const CATEGORY_FILTERS: { key: JobCategory | "all"; label: string }[] = [
+  { key: "all", label: "ALL ROLES" },
+  { key: "engineering", label: "ENGINEERING" },
+  { key: "product", label: "PRODUCT" },
+  { key: "design", label: "DESIGN" },
+  { key: "marketing", label: "MARKETING" },
+  { key: "sales-partnerships", label: "SALES & PARTNERSHIPS" },
+  { key: "operations", label: "OPERATIONS" },
+  { key: "finance-legal", label: "FINANCE & LEGAL" },
+  { key: "research", label: "RESEARCH" },
+  { key: "community-devrel", label: "COMMUNITY & DEVREL" },
+  { key: "other", label: "OTHER" },
+];
+
+const CATEGORY_LABEL: Record<JobCategory, string> = {
+  engineering: "ENGINEERING",
+  product: "PRODUCT",
+  design: "DESIGN",
+  marketing: "MARKETING",
+  "sales-partnerships": "SALES & PARTNERSHIPS",
+  operations: "OPERATIONS",
+  "finance-legal": "FINANCE & LEGAL",
+  research: "RESEARCH",
+  "community-devrel": "COMMUNITY & DEVREL",
+  other: "OTHER",
+};
+
 function timeAgo(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
   const days = Math.floor(diffMs / 86_400_000);
@@ -60,6 +100,7 @@ function timeAgo(iso: string): string {
 export default function Home() {
   const [data, setData] = useState<JobsFile | null>(null);
   const [filter, setFilter] = useState<JobType | "all">("all");
+  const [categoryFilter, setCategoryFilter] = useState<JobCategory | "all">("all");
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -95,6 +136,15 @@ export default function Home() {
     return byType;
   }, [jobs]);
 
+  const categoryCounts = useMemo(() => {
+    const byCategory: Record<string, number> = { all: jobs.length };
+    for (const j of jobs) {
+      const cat = j.category ?? "other";
+      byCategory[cat] = (byCategory[cat] ?? 0) + 1;
+    }
+    return byCategory;
+  }, [jobs]);
+
   const companyCount = useMemo(
     () => new Set(jobs.map((j) => j.company)).size,
     [jobs]
@@ -105,13 +155,17 @@ export default function Home() {
   );
 
   const filtered = useMemo(() => {
-    const list =
-      filter === "all" ? jobs : jobs.filter((j) => j.type === filter);
+    const list = jobs.filter((j) => {
+      if (filter !== "all" && j.type !== filter) return false;
+      if (categoryFilter !== "all" && (j.category ?? "other") !== categoryFilter)
+        return false;
+      return true;
+    });
     return [...list].sort((a, b) => {
       if (a.featured !== b.featured) return a.featured ? -1 : 1;
       return new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime();
     });
-  }, [jobs, filter]);
+  }, [jobs, filter, categoryFilter]);
 
   return (
     <div className="flex-1 flex flex-col">
@@ -184,6 +238,29 @@ export default function Home() {
               <button
                 key={f.key}
                 onClick={() => setFilter(f.key)}
+                className={`border-2 border-[var(--line)] px-4 py-1.5 text-xs tracking-wide font-bold transition-colors ${
+                  active
+                    ? "bg-[var(--ink)] text-[var(--bg)]"
+                    : "bg-[var(--panel)] hover:bg-[var(--bg-dot)]"
+                }`}
+              >
+                {f.label} · {count}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="border-b-2 border-[var(--line)] py-4 flex flex-wrap items-center gap-3">
+          <span className="inline-block h-2.5 w-2.5 bg-[var(--accent-purple)] border border-[var(--line)]" />
+          <span className="text-xs tracking-widest mr-1">ROLE TYPE</span>
+          {CATEGORY_FILTERS.map((f) => {
+            const active = categoryFilter === f.key;
+            const count = categoryCounts[f.key] ?? 0;
+            if (f.key !== "all" && count === 0) return null;
+            return (
+              <button
+                key={f.key}
+                onClick={() => setCategoryFilter(f.key)}
                 className={`border-2 border-[var(--line)] px-4 py-1.5 text-xs tracking-wide font-bold transition-colors ${
                   active
                     ? "bg-[var(--ink)] text-[var(--bg)]"
@@ -288,6 +365,9 @@ function JobCard({ job }: { job: Job }) {
         )}
       </div>
 
+      <div className="text-[10px] tracking-widest text-[var(--muted)] mb-1">
+        {CATEGORY_LABEL[job.category ?? "other"]}
+      </div>
       <h3 className="text-lg font-extrabold leading-tight tracking-tight mb-2">
         {job.title.toUpperCase()}
       </h3>

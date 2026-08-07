@@ -2,7 +2,7 @@
 """Refresh public/jobs.json from public job boards."""
 from __future__ import annotations
 
-import argparse, colorsys, hashlib, json, logging, os, re, tempfile
+import argparse, colorsys, hashlib, html, json, logging, os, re, tempfile
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -25,6 +25,7 @@ class Source:
     method: str
     scraper: Callable[["Source"], list[dict[str, Any]]] | None
     note: str = ""
+    company: str = ""
 
 
 def now() -> str:
@@ -33,7 +34,8 @@ def now() -> str:
 
 def clean(value: Any, default: str = "") -> str:
     if value is None: return default
-    return re.sub(r"\s+", " ", BeautifulSoup(str(value), "html.parser").get_text(" ", strip=True)).strip() or default
+    text = html.unescape(str(value))
+    return re.sub(r"\s+", " ", BeautifulSoup(text, "html.parser").get_text(" ", strip=True)).strip() or default
 
 
 def slug(value: str) -> str:
@@ -47,6 +49,27 @@ def job_type(text: str) -> str:
     if re.search(r"\b(part[ -]?time|temporary|temp)\b", text): return "part-time"
     if re.search(r"\b(contract|contractor|freelance|consultant)\b", text): return "contract"
     return "full-time"
+
+
+CATEGORY_RULES: list[tuple[str, str]] = [
+    ("engineering", r"\b(engineer|developer|swe|software|backend|front[ -]?end|full[ -]?stack|devops|sre|infrastructure|protocol|smart contract|blockchain engineer|data engineer|ml engineer|machine learning engineer|security engineer|qa engineer|platform engineer|systems engineer)\b"),
+    ("design", r"\b(designer|ux|ui|product design|brand design|design system)\b"),
+    ("product", r"\b(product manager|product owner|product lead|\bpm\b|product analyst)\b"),
+    ("research", r"\b(research(er)?|economist|data scientist|data science|tokenomics)\b"),
+    ("community-devrel", r"\b(developer relations|devrel|dev rel|developer advocate|community|evangelist|advocate|ecosystem)\b"),
+    ("marketing", r"\b(marketing|growth|content|social media|seo|comms|communications|brand)\b"),
+    ("sales-partnerships", r"\b(sales|partnership|business development|\bbd\b|account executive|account manager|solutions engineer)\b"),
+    ("finance-legal", r"\b(finance|accounting|accountant|legal|counsel|compliance|tax|treasury|controller|audit)\b"),
+    ("operations", r"\b(operations|\bops\b|people ops|human resources|\bhr\b|recruiter|recruiting|talent|office manager|executive assistant|chief of staff)\b"),
+]
+
+
+def role_category(text: str) -> str:
+    text = text.lower()
+    for category, pattern in CATEGORY_RULES:
+        if re.search(pattern, text):
+            return category
+    return "other"
 
 
 def color(company: str) -> str:
@@ -73,11 +96,13 @@ def normalize(raw: dict[str, Any], source: Source) -> dict[str, Any] | None:
     description = clean(raw.get("description"), f"{company} is hiring a {title}.")
     sentences = re.split(r"(?<=[.!?])\s+", description)
     description = " ".join(sentences[:3])[:600]
+    department = clean(raw.get("department"))
+    signal = " ".join([title, clean(raw.get("employment_type")), department, description])
     return {
         "id": slug(f"{company}-{title}"), "company": company,
         "companyInitial": company[0].upper(), "companyColor": color(company),
         "title": title, "description": description,
-        "type": job_type(" ".join([title, clean(raw.get("employment_type")), description])),
+        "type": job_type(signal), "category": role_category(" ".join([title, department])),
         "featured": False, "location": clean(raw.get("location"), "Remote or unspecified"),
         "comp": clean(raw.get("comp"), "Not listed"), "url": url,
         "source": label(source.url),
@@ -179,6 +204,52 @@ def scrape_getro(source: Source) -> list[dict[str, Any]]:
     return jobs
 
 
+def scrape_greenhouse(source: Source) -> list[dict[str, Any]]:
+    data = get(f"https://boards-api.greenhouse.io/v1/boards/{source.key}/jobs", params={"content": "true"}).json()
+    jobs = []
+    for item in data.get("jobs", []):
+        department = ", ".join(d["name"] for d in item.get("departments", []) if d.get("name"))
+        raw = {
+            "company": item.get("company_name") or source.company, "title": item.get("title"),
+            "description": item.get("content"), "department": department,
+            "location": (item.get("location") or {}).get("name"), "url": item.get("absolute_url"),
+        }
+        job = normalize(raw, source)
+        if job: jobs.append(job)
+    return jobs
+
+
+def scrape_lever(source: Source) -> list[dict[str, Any]]:
+    data = get(f"https://api.lever.co/v0/postings/{source.key}", params={"mode": "json"}).json()
+    jobs = []
+    for item in data:
+        cats = item.get("categories", {}) or {}
+        raw = {
+            "company": source.company, "title": item.get("text"),
+            "description": item.get("descriptionPlain") or item.get("description"),
+            "employment_type": cats.get("commitment"), "department": cats.get("team") or cats.get("department"),
+            "location": cats.get("location"), "url": item.get("hostedUrl") or item.get("applyUrl"),
+        }
+        job = normalize(raw, source)
+        if job: jobs.append(job)
+    return jobs
+
+
+def scrape_ashby(source: Source) -> list[dict[str, Any]]:
+    data = get(f"https://api.ashbyhq.com/posting-api/job-board/{source.key}").json()
+    jobs = []
+    for item in data.get("jobs", []):
+        raw = {
+            "company": source.company, "title": item.get("title"),
+            "description": item.get("descriptionPlain") or item.get("descriptionHtml"),
+            "employment_type": item.get("employmentType"), "department": item.get("department") or item.get("team"),
+            "location": item.get("location"), "url": item.get("jobUrl") or item.get("applyUrl"),
+        }
+        job = normalize(raw, source)
+        if job: jobs.append(job)
+    return jobs
+
+
 SOURCES = [
     Source("mempool", "https://www.mempool.nyc/", "disabled", None, "Softr/Airtable company directory, not a jobs feed"),
     Source("college", "https://www.college.xyz/careers", "HTML", scrape_college),
@@ -186,6 +257,38 @@ SOURCES = [
     Source("techchain", "https://www.careers-page.com/techchaintalent", "public Manatal page endpoint", scrape_manatal),
     Source("circle", "https://partners.circle.com/", "disabled", None, "Alliance partner directory, not a jobs feed"),
     Source("solana", "https://jobs.solana.com/jobs", "HTML", scrape_getro, "Getro API requires credentials"),
+
+    # Greenhouse-hosted company career boards (public JSON API)
+    Source("coinbase", "https://www.coinbase.com/careers", "Greenhouse API", scrape_greenhouse, company="Coinbase"),
+    Source("consensys", "https://consensys.io/careers", "Greenhouse API", scrape_greenhouse, company="Consensys"),
+    Source("gemini", "https://www.gemini.com/careers", "Greenhouse API", scrape_greenhouse, company="Gemini"),
+    Source("paradigm", "https://www.paradigm.xyz/careers", "Greenhouse API", scrape_greenhouse, company="Paradigm"),
+    Source("messari", "https://messari.io/careers", "Greenhouse API", scrape_greenhouse, company="Messari"),
+    Source("bitgo", "https://www.bitgo.com/careers", "Greenhouse API", scrape_greenhouse, company="BitGo"),
+    Source("ripple", "https://ripple.com/careers", "Greenhouse API", scrape_greenhouse, company="Ripple"),
+    Source("zora", "https://zora.co/careers", "Greenhouse API", scrape_greenhouse, company="Zora"),
+    Source("aptoslabs", "https://aptoslabs.com/careers", "Greenhouse API", scrape_greenhouse, company="Aptos Labs"),
+    Source("jumpcrypto", "https://jumpcrypto.com/careers", "Greenhouse API", scrape_greenhouse, company="Jump Crypto"),
+
+    # Lever-hosted company career boards (public JSON API)
+    Source("kraken", "https://www.kraken.com/careers", "Lever API", scrape_lever, company="Kraken"),
+    Source("anchorage", "https://anchorage.com/careers", "Lever API", scrape_lever, company="Anchorage Digital"),
+    Source("offchainlabs", "https://offchainlabs.com/careers", "Lever API", scrape_lever, company="Offchain Labs (Arbitrum)"),
+    Source("celestia", "https://celestia.org/careers", "Lever API", scrape_lever, company="Celestia Labs"),
+    Source("ledger", "https://www.ledger.com/careers", "Lever API", scrape_lever, company="Ledger"),
+    Source("immutable", "https://www.immutable.com/careers", "Lever API", scrape_lever, company="Immutable"),
+    Source("1inch", "https://1inch.io/careers", "Lever API", scrape_lever, company="1inch"),
+
+    # Ashby-hosted company career boards (public JSON API)
+    Source("alchemy", "https://www.alchemy.com/careers", "Ashby API", scrape_ashby, company="Alchemy"),
+    Source("opensea", "https://opensea.io/careers", "Ashby API", scrape_ashby, company="OpenSea"),
+    Source("parity", "https://www.parity.io/careers", "Ashby API", scrape_ashby, company="Parity Technologies"),
+    Source("stellar", "https://www.stellar.org/careers", "Ashby API", scrape_ashby, company="Stellar Development Foundation"),
+    Source("lens", "https://lens.xyz/careers", "Ashby API", scrape_ashby, company="Lens Protocol"),
+    Source("compound", "https://compound.finance/careers", "Ashby API", scrape_ashby, company="Compound Labs"),
+    Source("mystenlabs", "https://sui.io/careers", "Ashby API", scrape_ashby, company="Mysten Labs (Sui)"),
+    Source("magiceden", "https://magiceden.io/careers", "Ashby API", scrape_ashby, company="Magic Eden"),
+    Source("skyecosystem", "https://sky.money/careers", "Ashby API", scrape_ashby, company="Sky (fka MakerDAO)"),
 ]
 
 

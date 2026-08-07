@@ -80,6 +80,7 @@ def main() -> None:
         "title": title,
         "description": str(payload.get("description", "")).strip(),
         "type": payload.get("type", "full-time"),
+        "category": payload.get("category", "other"),
         "featured": False,
         "location": payload.get("location") or "Remote or unspecified",
         "comp": payload.get("comp") or "Not listed",

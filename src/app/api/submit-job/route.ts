@@ -3,6 +3,18 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 const TYPES = ["internship", "full-time", "part-time", "contract", "fellowship"];
+const CATEGORIES = [
+  "engineering",
+  "product",
+  "design",
+  "marketing",
+  "sales-partnerships",
+  "operations",
+  "finance-legal",
+  "research",
+  "community-devrel",
+  "other",
+];
 
 function badRequest(message: string) {
   return NextResponse.json({ error: message }, { status: 400 });
@@ -34,6 +46,7 @@ export async function POST(req: NextRequest) {
   const title = String(body.title ?? "").trim().slice(0, 160);
   const description = String(body.description ?? "").trim().slice(0, 800);
   const type = String(body.type ?? "").trim();
+  const category = String(body.category ?? "").trim();
   const location = String(body.location ?? "").trim().slice(0, 120);
   const comp = String(body.comp ?? "").trim().slice(0, 120);
   const url = String(body.url ?? "").trim();
@@ -44,6 +57,9 @@ export async function POST(req: NextRequest) {
   }
   if (!TYPES.includes(type)) {
     return badRequest("Invalid job type.");
+  }
+  if (!CATEGORIES.includes(category)) {
+    return badRequest("Invalid job category.");
   }
   let parsedUrl: URL;
   try {
@@ -58,6 +74,7 @@ export async function POST(req: NextRequest) {
     title,
     description,
     type,
+    category,
     location: location || "Remote or unspecified",
     comp: comp || "Not listed",
     url: parsedUrl.toString(),
