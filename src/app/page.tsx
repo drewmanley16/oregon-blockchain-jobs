@@ -169,9 +169,25 @@ export default function Home() {
     });
     return [...list].sort((a, b) => {
       if (a.featured !== b.featured) return a.featured ? -1 : 1;
-      return new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime();
+      const byCompany = a.company.localeCompare(b.company, undefined, {
+        sensitivity: "base",
+      });
+      if (byCompany !== 0) return byCompany;
+      return a.title.localeCompare(b.title, undefined, { sensitivity: "base" });
     });
   }, [jobs, filter, categoryFilter, query]);
+
+  const PAGE_SIZE = 15;
+  const [page, setPage] = useState(1);
+  useEffect(() => {
+    setPage(1);
+  }, [filter, categoryFilter, query]);
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const currentPage = Math.min(page, pageCount);
+  const paged = useMemo(
+    () => filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE),
+    [filtered, currentPage]
+  );
 
   return (
     <div className="flex-1 flex flex-col">
@@ -195,7 +211,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-xs tracking-widest text-[var(--muted)] mb-4">
               <span className="inline-block h-2 w-2 border border-[var(--line)] bg-[var(--accent-blue)]" />
-              § INDEX · CRYPTO CAREERS
+              § INDEX · STUDENT CRYPTO CAREERS
             </div>
             <h1 className="text-6xl sm:text-7xl font-extrabold leading-[0.95] tracking-tight">
               ONCHAIN{" "}
@@ -207,10 +223,11 @@ export default function Home() {
               <span>.</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-[var(--ink)]/80">
-              Crypto and blockchain jobs across Oregon and remote —
-              internships, research fellowships, and full-time offers.
-              Scraped continuously from company career pages and posted
-              here automatically. Apply directly, no platform in between.
+              Internships, co-ops, new-grad roles, and other limited-experience
+              crypto and blockchain opportunities across Oregon and remote —
+              curated for the OBG community. No senior or lead roles here.
+              Scraped continuously from company career pages and posted here
+              automatically. Apply directly, no platform in between.
             </p>
           </div>
 
@@ -312,11 +329,18 @@ export default function Home() {
                   .slice(0, 22)} UTC`
               : "LOADING…"}
           </span>
-          <span>{filtered.length} SHOWN</span>
+          <span>
+            {filtered.length > 0
+              ? `${(currentPage - 1) * PAGE_SIZE + 1}–${Math.min(
+                  currentPage * PAGE_SIZE,
+                  filtered.length
+                )} OF ${filtered.length} SHOWN`
+              : "0 SHOWN"}
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-0 border-t-2 border-l-2 border-[var(--line)] mb-16">
-          {filtered.map((job) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-0 border-t-2 border-l-2 border-[var(--line)]">
+          {paged.map((job) => (
             <JobCard key={job.id} job={job} />
           ))}
           {data && filtered.length === 0 && (
@@ -326,6 +350,29 @@ export default function Home() {
             </div>
           )}
         </div>
+
+        {pageCount > 1 && (
+          <div className="flex items-center justify-center gap-3 border-r-2 border-b-2 border-l-2 border-[var(--line)] py-5 mb-16">
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="border-2 border-[var(--line)] px-3 py-1.5 text-xs font-bold tracking-widest disabled:opacity-30 hover:bg-[var(--bg-dot)] transition-colors"
+            >
+              ← PREV
+            </button>
+            <span className="text-xs tracking-widest text-[var(--muted)]">
+              PAGE {currentPage} OF {pageCount}
+            </span>
+            <button
+              onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
+              disabled={currentPage === pageCount}
+              className="border-2 border-[var(--line)] px-3 py-1.5 text-xs font-bold tracking-widest disabled:opacity-30 hover:bg-[var(--bg-dot)] transition-colors"
+            >
+              NEXT →
+            </button>
+          </div>
+        )}
+        {pageCount <= 1 && <div className="mb-16" />}
       </main>
 
       <footer className="border-t-2 border-[var(--line)] py-6">

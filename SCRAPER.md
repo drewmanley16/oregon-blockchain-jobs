@@ -2,6 +2,18 @@
 
 The `Refresh job listings` GitHub Actions workflow runs every six hours and commits changes to `public/jobs.json` and `scripts/scraper_state.json`. Vercel deploys the resulting commit.
 
+## Entry-level only
+
+This board serves a college blockchain club, so `is_entry_level()` in
+`scrape_jobs.py` drops anything that isn't an internship/co-op, fellowship,
+new-grad role, or a posting that otherwise signals low years-of-experience.
+Titles matching `SENIOR_PATTERN` (senior, staff, principal, lead, manager,
+director, VP, chief, architect, etc.) are dropped outright, even if the
+company's own posting doesn't say "senior" explicitly enough to be caught —
+this is a title-keyword heuristic, not perfect, so occasional misses in
+either direction are expected. Internships and fellowships always pass
+through unfiltered.
+
 ## Source classification
 
 | Source | Method | Notes |

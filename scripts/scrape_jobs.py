@@ -51,6 +51,35 @@ def job_type(text: str) -> str:
     return "full-time"
 
 
+# This board only serves a college blockchain club, so senior/lead/management
+# postings are dropped entirely rather than just deprioritized: internships and
+# fellowships are always in scope, everything else has to look explicitly
+# entry-level (new grad, junior, associate, or a low years-of-experience ask).
+SENIOR_PATTERN = re.compile(
+    r"\b(senior|sr\.?|staff|principal|lead|head of|director|\bvp\b|vice president|"
+    r"chief|executive|architect|manager|president)\b", re.I,
+)
+ENTRY_PATTERN = re.compile(
+    r"\b(new grad(uate)?|graduate program|junior|jr\.?|associate|entry[ -]level|"
+    r"early career|apprentice|campus|rotational|university (program|hire)|"
+    r"co[ -]?op)\b", re.I,
+)
+LOW_EXPERIENCE_PATTERN = re.compile(
+    r"\b(0-1|0-2|0 to 2|1-2|1 to 2 years|no prior experience|no experience required|"
+    r"recent graduate|recently graduated)\b", re.I,
+)
+
+
+def is_entry_level(title: str, job_type_value: str, description: str = "") -> bool:
+    if job_type_value in ("internship", "fellowship"):
+        return True
+    if SENIOR_PATTERN.search(title):
+        return False
+    if ENTRY_PATTERN.search(title):
+        return True
+    return bool(LOW_EXPERIENCE_PATTERN.search(description))
+
+
 CATEGORY_RULES: list[tuple[str, str]] = [
     ("engineering", r"\b(engineer|developer|swe|software|backend|front[ -]?end|full[ -]?stack|devops|sre|infrastructure|protocol|smart contract|blockchain engineer|data engineer|ml engineer|machine learning engineer|security engineer|qa engineer|platform engineer|systems engineer)\b"),
     ("design", r"\b(designer|ux|ui|product design|brand design|design system)\b"),
@@ -98,11 +127,14 @@ def normalize(raw: dict[str, Any], source: Source) -> dict[str, Any] | None:
     description = " ".join(sentences[:3])[:600]
     department = clean(raw.get("department"))
     signal = " ".join([title, clean(raw.get("employment_type")), department, description])
+    job_type_value = job_type(signal)
+    if not is_entry_level(title, job_type_value, description):
+        return None
     return {
         "id": slug(f"{company}-{title}"), "company": company,
         "companyInitial": company[0].upper(), "companyColor": color(company),
         "title": title, "description": description,
-        "type": job_type(signal), "category": role_category(" ".join([title, department])),
+        "type": job_type_value, "category": role_category(" ".join([title, department])),
         "featured": False, "location": clean(raw.get("location"), "Remote or unspecified"),
         "comp": clean(raw.get("comp"), "Not listed"), "url": url,
         "source": label(source.url),

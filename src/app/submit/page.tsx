@@ -102,9 +102,10 @@ export default function SubmitJob() {
           </span>
         </h1>
         <p className="text-base leading-relaxed text-[var(--ink)]/80 mb-10">
-          Hiring crypto or blockchain talent in Oregon or remote? Submit the
-          role below. Every submission is reviewed before it goes live on
-          the board.
+          Hiring students or new grads for crypto or blockchain work in
+          Oregon or remote? This board is limited-experience only —
+          internships, co-ops, new-grad roles, and similar. Submit the role
+          below; every submission is reviewed before it goes live.
         </p>
 
         {status === "success" ? (
