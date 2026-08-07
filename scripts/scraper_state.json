@@ -1,6 +1,1614 @@
 {
   "version": 1,
-  "jobs": {},
-  "lastRunAt": null,
-  "sourceStatus": {}
+  "jobs": {
+    "college:inception-capital-investment-analyst-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "inception-capital-investment-analyst-intern",
+        "company": "Inception Capital",
+        "companyInitial": "I",
+        "companyColor": "#2ab294",
+        "title": "Investment Analyst Intern",
+        "description": "We’re hiring an Investment Analyst Intern at Inception Capital.",
+        "type": "internship",
+        "featured": false,
+        "location": "NYC",
+        "comp": "Not listed",
+        "url": "https://www.college.xyz/careers/64",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:inception-capital-marketing-operations-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "inception-capital-marketing-operations-intern",
+        "company": "Inception Capital",
+        "companyInitial": "I",
+        "companyColor": "#2ab294",
+        "title": "Marketing & Operations Intern",
+        "description": "We’re hiring a Marketing & Operations Intern at Inception Capital: You’ll work closely with our founder and leadership team across marketing, events, executive operations, and ecosystem building.",
+        "type": "internship",
+        "featured": false,
+        "location": "NYC",
+        "comp": "Not listed",
+        "url": "https://www.college.xyz/careers/63",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:gemini-marketing-coordinator-predictions-partnerships": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "gemini-marketing-coordinator-predictions-partnerships",
+        "company": "Gemini",
+        "companyInitial": "G",
+        "companyColor": "#2ab255",
+        "title": "Marketing Coordinator (Predictions Partnerships)",
+        "description": "$13",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY",
+        "comp": "$$75,000 - $100,000",
+        "url": "https://job-boards.greenhouse.io/embed/job_app?for=gemini&token=8069545&gh_jid=8069545",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:veryai-full-stack-engineer": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "veryai-full-stack-engineer",
+        "company": "VeryAI",
+        "companyInitial": "V",
+        "companyColor": "#a02ab2",
+        "title": "Full Stack Engineer",
+        "description": "VeryAI is hiring a Full Stack Engineer to build the backend and frontend systems powering hardware-free palm verification at scale, working closely with the founding team. The ideal candidate is a pragmatic, security-minded builder who ships fast, leverages AI coding tools daily, and has the judgment to know when AI-generated code falls short — especially critical in a fraud and biometrics product.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Onsite or Remote",
+        "comp": "$$120k-$200k",
+        "url": "https://wellfound.com/jobs/3807652-full-stack-engineer",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:gemini-marketing-coordinator-community-engagement": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "gemini-marketing-coordinator-community-engagement",
+        "company": "Gemini",
+        "companyInitial": "G",
+        "companyColor": "#2ab255",
+        "title": "Marketing Coordinator (Community Engagement)",
+        "description": "$14",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY",
+        "comp": "$$75,000-$100,000",
+        "url": "https://job-boards.greenhouse.io/embed/job_app?for=gemini&token=7951089",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:gemini-junior-brand-designer-social": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "gemini-junior-brand-designer-social",
+        "company": "Gemini",
+        "companyInitial": "G",
+        "companyColor": "#2ab255",
+        "title": "Junior Brand Designer (Social)",
+        "description": "Gemini is looking for a junior creative who lives online and wants to help build a brand into something iconic. The ideal candidate thrives when their work is out, being seen in the world. You have a bias toward making over talking.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York",
+        "comp": "$$90,000-$120,000",
+        "url": "https://job-boards.greenhouse.io/embed/job_app?for=gemini&token=7955267",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:gemini-associate-growth-marketing-advanced-trading-products": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "gemini-associate-growth-marketing-advanced-trading-products",
+        "company": "Gemini",
+        "companyInitial": "G",
+        "companyColor": "#2ab255",
+        "title": "Associate, Growth Marketing (Advanced Trading Products)",
+        "description": "$15",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY",
+        "comp": "$$82,500-$110,000",
+        "url": "https://job-boards.greenhouse.io/embed/job_app?for=gemini&token=7951043",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:blockchain-marketing-intern-researcher": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "blockchain-marketing-intern-researcher",
+        "company": "Blockchain",
+        "companyInitial": "B",
+        "companyColor": "#2a2cb2",
+        "title": "Marketing Intern - Researcher",
+        "description": "Join Blockchain.com's Marketing team in London for a 6 month internship supporting audience research, content, digital marketing, and lead generation across both B2B and B2C functions.",
+        "type": "internship",
+        "featured": false,
+        "location": "London, United Kingdom",
+        "comp": "Not listed",
+        "url": "https://job-boards.greenhouse.io/blockchain/jobs/7578640",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:blockchain-legal-compliance-summer-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "blockchain-legal-compliance-summer-intern",
+        "company": "Blockchain",
+        "companyInitial": "B",
+        "companyColor": "#2a2cb2",
+        "title": "Legal & Compliance Summer Intern",
+        "description": "Support Blockchain.com's Legal and Compliance team in Dallas for the summer, working on regulatory reporting, corporate documents, and cross functional projects at a leading global crypto company.",
+        "type": "internship",
+        "featured": false,
+        "location": "Dallas, Texas",
+        "comp": "Not listed",
+        "url": "https://job-boards.greenhouse.io/blockchain/jobs/7646000a",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:blockchain-it-support-engineer-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "blockchain-it-support-engineer-intern",
+        "company": "Blockchain",
+        "companyInitial": "B",
+        "companyColor": "#2a2cb2",
+        "title": "IT Support Engineer Intern",
+        "description": "Join Blockchain.com's IT team in Dallas for a 6 month internship supporting global IT operations, end user technology, and cloud based tools in a fast paced fintech environment.",
+        "type": "internship",
+        "featured": false,
+        "location": "Dallas, Texas",
+        "comp": "Not listed",
+        "url": "https://job-boards.greenhouse.io/blockchain/jobs/7575058",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:blockchain-hr-summer-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "blockchain-hr-summer-intern",
+        "company": "Blockchain",
+        "companyInitial": "B",
+        "companyColor": "#2a2cb2",
+        "title": "HR Summer Intern",
+        "description": "Support Blockchain.com's People team for 12 weeks in London, working on internal communications, employee engagement campaigns, and HR operations at a leading global crypto company.",
+        "type": "internship",
+        "featured": false,
+        "location": "London, United Kingdom",
+        "comp": "Not listed",
+        "url": "https://job-boards.greenhouse.io/blockchain/jobs/7588015",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:blockchain-consumer-operations-data-analyst-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "blockchain-consumer-operations-data-analyst-intern",
+        "company": "Blockchain",
+        "companyInitial": "B",
+        "companyColor": "#2a2cb2",
+        "title": "Consumer Operations Data Analyst Intern",
+        "description": "Build automation pipelines and analytics dashboards for Blockchain.com's Customer Operations team, working across fraud detection, trust and safety, and risk management from our Paris office.",
+        "type": "internship",
+        "featured": false,
+        "location": "Paris, France",
+        "comp": "Not listed",
+        "url": "https://job-boards.greenhouse.io/blockchain/jobs/7871140",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:grayscale-distribution-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "grayscale-distribution-intern",
+        "company": "Grayscale",
+        "companyInitial": "G",
+        "companyColor": "#2a6bb2",
+        "title": "Distribution Intern",
+        "description": "Join Grayscale's Distribution team for Summer 2026, supporting institutional sales, client service, and CRM operations at the world's largest digital asset investment platform.",
+        "type": "internship",
+        "featured": false,
+        "location": "Stamford, Connecticut",
+        "comp": "Not listed",
+        "url": "https://job-boards.greenhouse.io/grayscaleinvestments/jobs/7722133003?source=web3.career&gh_src=web3.career#application_form",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:wintermute-summer-2026-vc-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "wintermute-summer-2026-vc-intern",
+        "company": "Wintermute",
+        "companyInitial": "W",
+        "companyColor": "#b22a60",
+        "title": "Summer 2026 VC Intern",
+        "description": "You will get exposure to live deal flow, portfolio management, protocol analysis, investment diligence, and internal discussions across our network. You will be expected to take ownership of real work, form clear views, and communicate your thinking well.",
+        "type": "internship",
+        "featured": false,
+        "location": "Remote",
+        "comp": "Not listed",
+        "url": "https://www.wintermute.com/company/opportunities/bc6834fe-e3ad-4c09-a4db-2fce3b13ee8f#apply_form",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:gemini-software-engineering-intern-fall-2026": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "gemini-software-engineering-intern-fall-2026",
+        "company": "Gemini",
+        "companyInitial": "G",
+        "companyColor": "#2ab255",
+        "title": "Software Engineering Intern (Fall 2026)",
+        "description": "Join Gemini's engineering team for a 16-week fall internship building products on a global crypto and Web3 platform. Work across frontend and/or backend on real production systems — from securing customer funds to shipping new blockchain products — with mentorship from senior engineers. In-person 3 days/week at the NYC office.",
+        "type": "internship",
+        "featured": false,
+        "location": "New York, NY (Hybrid, 3 days/week in office)",
+        "comp": "$$50/hr",
+        "url": "https://job-boards.greenhouse.io/embed/job_app?for=gemini&token=7875125",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:injective-product-manager-internship-position-filled": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "injective-product-manager-internship-position-filled",
+        "company": "Injective",
+        "companyInitial": "I",
+        "companyColor": "#b22a2e",
+        "title": "Product Manager Internship (Position filled)",
+        "description": "Come work from our HQ in New York. As a Product Manager Intern, you will support our CEO and Special Ops Product Manager on various projects and daily operations while gaining hands-on experience in a fast-paced, collaborative environment.",
+        "type": "internship",
+        "featured": false,
+        "location": "New York",
+        "comp": "$$7.5K – $8K per month",
+        "url": "https://jobs.ashbyhq.com/Injective/b455db86-584f-4186-b69c-7a6cc6704d0e",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:moonpay-tiktok-content-creator-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "moonpay-tiktok-content-creator-intern",
+        "company": "Moonpay",
+        "companyInitial": "M",
+        "companyColor": "#2a35b2",
+        "title": "TikTok Content Creator Intern",
+        "description": "Create TikTok content for MoonPay. NYC-based, paid part-time. iPhone content creation.",
+        "type": "internship",
+        "featured": false,
+        "location": "New York City",
+        "comp": "Paid (part-time)",
+        "url": "https://www.college.xyz/careers/33",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:ether-fi-social-media-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "ether-fi-social-media-intern",
+        "company": "ether.fi",
+        "companyInitial": "E",
+        "companyColor": "#2aa0b2",
+        "title": "Social Media Intern",
+        "description": "Lead TikTok and Instagram growth for one of the fastest growing fintechs. $8M marketing budget at your disposal.",
+        "type": "internship",
+        "featured": false,
+        "location": "Remote",
+        "comp": "$$1,000-$4,000/mo",
+        "url": "https://www.college.xyz/careers/32",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "college:ether-fi-gtm-engineer-intern": {
+      "source": "college",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "ether-fi-gtm-engineer-intern",
+        "company": "ether.fi",
+        "companyInitial": "E",
+        "companyColor": "#2aa0b2",
+        "title": "GTM Engineer Intern",
+        "description": "Automate GTM processes and build growth features at one of the fastest growing fintechs ($10B+ AUM).",
+        "type": "internship",
+        "featured": false,
+        "location": "Remote",
+        "comp": "$$1,000-$4,000/mo",
+        "url": "https://www.college.xyz/careers/31",
+        "source": "college.xyz/careers",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:stokr-product-design-lead": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "stokr-product-design-lead",
+        "company": "Stokr",
+        "companyInitial": "S",
+        "companyColor": "#87b22a",
+        "title": "Product Design Lead",
+        "description": "Stokr is hiring a Product Design Lead.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote / Luxembourg",
+        "comp": "Not listed",
+        "url": "https://web3.career/product-design-lead-stokr/151071",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:apex-trade-entry-level-crypto-market-specialist": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "apex-trade-entry-level-crypto-market-specialist",
+        "company": "APEX TRADE",
+        "companyInitial": "A",
+        "companyColor": "#892ab2",
+        "title": "Entry-Level Crypto Market Specialist",
+        "description": "APEX TRADE is hiring a Entry-Level Crypto Market Specialist.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote",
+        "comp": "$50k - $70k",
+        "url": "https://web3.career/entry-level-crypto-market-specialist-apex-trade/151979",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:lemon-io-senior-blockchain-developer": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "lemon-io-senior-blockchain-developer",
+        "company": "Lemon.io",
+        "companyInitial": "L",
+        "companyColor": "#b22a67",
+        "title": "Senior Blockchain Developer",
+        "description": "Lemon.io is hiring a Senior Blockchain Developer.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Canada, the U.S., LATAM, Europe, Asia, Oceania",
+        "comp": "Not listed",
+        "url": "https://web3.career/senior-blockchain-developer-lemon-io/149705",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:zigchain-infrastructure-systems-operations-engineer-junior-to-mid": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "zigchain-infrastructure-systems-operations-engineer-junior-to-mid",
+        "company": "ZIGChain",
+        "companyInitial": "Z",
+        "companyColor": "#2ab23a",
+        "title": "Infrastructure / Systems Operations Engineer (Junior to Mid)",
+        "description": "ZIGChain is hiring a Infrastructure / Systems Operations Engineer (Junior to Mid).",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote",
+        "comp": "$40k - $50k",
+        "url": "https://web3.career/infrastructure-systems-operations-engineer-junior-to-mid-zigchain/151392",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:crypto-com-compliance-manager-consumer-compliance": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "crypto-com-compliance-manager-consumer-compliance",
+        "company": "Crypto.com",
+        "companyInitial": "C",
+        "companyColor": "#b2472a",
+        "title": "Compliance Manager Consumer Compliance",
+        "description": "Crypto.com is hiring a Compliance Manager Consumer Compliance.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Tyler, Texas",
+        "comp": "$80k - $100k",
+        "url": "https://web3.career/compliance-manager-consumer-compliance-crypto-com/152395",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:flint-labs-quantitative-developer": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "flint-labs-quantitative-developer",
+        "company": "Flint Labs",
+        "companyInitial": "F",
+        "companyColor": "#7bb22a",
+        "title": "Quantitative Developer",
+        "description": "Flint Labs is hiring a Quantitative Developer.",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "$90k - $150k",
+        "url": "https://web3.career/quantitative-developer-flintlabs/152394",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:flint-labs-full-stack-engineer": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "flint-labs-full-stack-engineer",
+        "company": "Flint Labs",
+        "companyInitial": "F",
+        "companyColor": "#7bb22a",
+        "title": "Full Stack Engineer",
+        "description": "Flint Labs is hiring a Full Stack Engineer.",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "$105k - $120k",
+        "url": "https://web3.career/full-stack-engineer-flintlabs/152393",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:flint-labs-marketing-lead": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "flint-labs-marketing-lead",
+        "company": "Flint Labs",
+        "companyInitial": "F",
+        "companyColor": "#7bb22a",
+        "title": "Marketing Lead",
+        "description": "Flint Labs is hiring a Marketing Lead.",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "$81k - $90k",
+        "url": "https://web3.career/marketing-lead-flintlabs/152392",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:perena-solana-protocol-engineer": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "perena-solana-protocol-engineer",
+        "company": "Perena",
+        "companyInitial": "P",
+        "companyColor": "#a92ab2",
+        "title": "Solana Protocol Engineer",
+        "description": "Perena is hiring a Solana Protocol Engineer.",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "$84k - $90k",
+        "url": "https://web3.career/solana-protocol-engineer-perena/152391",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:r3-senior-web3-sdet": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "r3-senior-web3-sdet",
+        "company": "R3",
+        "companyInitial": "R",
+        "companyColor": "#b2552a",
+        "title": "Senior Web3 SDET",
+        "description": "R3 is hiring a Senior Web3 SDET.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Mumbai ,",
+        "comp": "$64k - $120k",
+        "url": "https://web3.career/senior-web3-sdet-r3/152390",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:animoca-brands-limited-senior-associate-accounting": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "animoca-brands-limited-senior-associate-accounting",
+        "company": "Animoca Brands Limited",
+        "companyInitial": "A",
+        "companyColor": "#8db22a",
+        "title": "Senior Associate Accounting",
+        "description": "Animoca Brands Limited is hiring a Senior Associate Accounting.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Hong Kong ,",
+        "comp": "$90k - $96k",
+        "url": "https://web3.career/senior-associate-accounting-animocabrands/152389",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:binance-binance-accelerator-program-marketing-bd-operations": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "binance-binance-accelerator-program-marketing-bd-operations",
+        "company": "Binance",
+        "companyInitial": "B",
+        "companyColor": "#2ab255",
+        "title": "Binance Accelerator Program Marketing BD Operations",
+        "description": "Binance is hiring a Binance Accelerator Program Marketing BD Operations.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote",
+        "comp": "Not listed",
+        "url": "https://web3.career/binance-accelerator-program-marketing-bd-operations-binance/152388",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:socc-founding-capital-partner-bitcoin-ai": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "socc-founding-capital-partner-bitcoin-ai",
+        "company": "SOCC",
+        "companyInitial": "S",
+        "companyColor": "#2a59b2",
+        "title": "Founding Capital Partner Bitcoin AI",
+        "description": "SOCC is hiring a Founding Capital Partner Bitcoin AI.",
+        "type": "full-time",
+        "featured": false,
+        "location": "San Francisco ,",
+        "comp": "$90k - $125k",
+        "url": "https://web3.career/founding-capital-partner-bitcoin-ai-socc/152387",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:coinbase-senior-software-engineer-stablecoins": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "coinbase-senior-software-engineer-stablecoins",
+        "company": "Coinbase",
+        "companyInitial": "C",
+        "companyColor": "#872ab2",
+        "title": "Senior Software Engineer Stablecoins",
+        "description": "Coinbase is hiring a Senior Software Engineer Stablecoins.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Miami ,",
+        "comp": "$91k - $180k",
+        "url": "https://web3.career/senior-software-engineer-stablecoins-coinbase/152386",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:cumberland-blockchain-strategy-analyst": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "cumberland-blockchain-strategy-analyst",
+        "company": "Cumberland",
+        "companyInitial": "C",
+        "companyColor": "#2a4cb2",
+        "title": "Blockchain Strategy Analyst",
+        "description": "Cumberland is hiring a Blockchain Strategy Analyst.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Chicago ,",
+        "comp": "$125k - $200k",
+        "url": "https://web3.career/blockchain-strategy-analyst-cumberland/152385",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:phemex-knm-loom": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "phemex-knm-loom",
+        "company": "Phemex-knm",
+        "companyInitial": "P",
+        "companyColor": "#2a9bb2",
+        "title": "Loom",
+        "description": "Phemex-knm is hiring a Loom.",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "$87k - $120k",
+        "url": "https://web3.career/loom-phemex-knm/152384",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:phemex-knm-cate": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "phemex-knm-cate",
+        "company": "Phemex-knm",
+        "companyInitial": "P",
+        "companyColor": "#2a9bb2",
+        "title": "CATE",
+        "description": "Phemex-knm is hiring a CATE.",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "$87k - $120k",
+        "url": "https://web3.career/cate-phemex-knm/152383",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:themesoft-inc-blockchain-architect": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "themesoft-inc-blockchain-architect",
+        "company": "Themesoft Inc.",
+        "companyInitial": "T",
+        "companyColor": "#2a79b2",
+        "title": "Blockchain Architect",
+        "description": "Themesoft Inc. is hiring a Blockchain Architect.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Jersey City ,",
+        "comp": "$150k - $160k",
+        "url": "https://web3.career/blockchain-architect-themesoftinc/152382",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "web3-career:binance-head-of-risk-ntl": {
+      "source": "web3-career",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "binance-head-of-risk-ntl",
+        "company": "Binance",
+        "companyInitial": "B",
+        "companyColor": "#2ab255",
+        "title": "Head of Risk NTL",
+        "description": "Binance is hiring a Head of Risk NTL.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Asia",
+        "comp": "Not listed",
+        "url": "https://web3.career/head-of-risk-ntl-binance/152353",
+        "source": "web3.career",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-backend-engineer": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-backend-engineer",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Backend Engineer",
+        "description": "Backend Engineer (on-site/London) - up to £260k A high-growth blockchain infrastructure company is building the next generation of ultra-fast trading and digital asset platforms, and were looking for an exceptional Backend Engineer to join the London team onsite . If you thrive in high-performance environments, love tackling complex engineering challenges, and want to help bridge the gap between traditional finance and crypto innovation, this is the opportunity for you. What You'll Do: Design and develop backend systems powering high-frequency trading and crypto platforms Build performance-cri",
+        "type": "full-time",
+        "featured": false,
+        "location": "London, United Kingdom",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/933RRXV4",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-chief-of-staff": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-chief-of-staff",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Chief of Staff",
+        "description": "About the Company We are building the rails to bring Wall Street into the 21st century. Backed by $40M from leading crypto and fintech investors, we are bringing together the best minds from Ethereum and Wall Street to rebuild the infrastructure that underpins the financial system — faster, safer, fully on-chain. About the Role Are you the person who can't sit in a room full of loose ideas and half-made decisions without walking out owning the plan?",
+        "type": "full-time",
+        "featured": false,
+        "location": "Austin, Texas, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/7XV8Y395",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-ecosystem-product-security-director": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-ecosystem-product-security-director",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Ecosystem Product Security Director",
+        "description": "About Stellar Stellar is a decentralized, public blockchain that gives developers the tools to create experiences that are more like cash than crypto. The network is faster, cheaper, and far more energy-efficient than most blockchain-based systems. About the Role We're hiring a Director, Ecosystem & Product Security to lead security strategy across the Stellar ecosystem and directly own security outcomes for Foundation-developed systems, Foundation-operated infrastructure, and treasury-related security responsibilities.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/5WR7WYV3",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-fullstack-engineer": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-fullstack-engineer",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Fullstack Engineer",
+        "description": "About the Company We are building the rails to bring Wall Street settlement into the 21st century. Current settlement infrastructure wastes billions in trapped capital and operational inefficiency, forcing institutions to maintain massive reserves, limiting market liquidity, and creating systemic risk that grows more dangerous as markets become increasingly global and interconnected. Backed by $40M from leading crypto and fintech investors, we are bringing together the best from both Wall Street and Ethereum to reimagine the infrastructure that underpins the financial system.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Austin, Texas, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/93X87996",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-junior-legal-counsel": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-junior-legal-counsel",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Junior Legal Counsel",
+        "description": "About the Company We are a real-world asset tokenization platform bringing the full power of onchain finance to asset managers and investors. From building tokenized funds for DeFi-native markets to launching vaults and stablecoins backed by real assets, we enable institutions to own their stack, grow their market, and capture the economics of finance moving onchain. Our mission is to bring real-world finance and DeFi together at scale.",
+        "type": "full-time",
+        "featured": false,
+        "location": "London, United Kingdom",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/63R946X5",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-junior-recruitment-consultant": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-junior-recruitment-consultant",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Junior Recruitment Consultant",
+        "description": "TechChain Talent, Chiswick, London | Full-Time, On-Site Location: Chiswick, London (5 days on-site) Salary: £30,000 base + uncapped commission Contract: Permanent, Full-Time Experience: No previous recruitment experience required About TechChain Talent TechChain Talent is one of the world's leading specialist recruitment agencies dedicated exclusively to the blockchain, Web3, and crypto ecosystem. We partner with some of the most recognised and fastest-growing projects in the industry, from Layer 1 and Layer 2 protocol teams to DeFi platforms, digital asset banks, and infrastructure providers.",
+        "type": "contract",
+        "featured": false,
+        "location": "London, United Kingdom",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/4R65V3Y5",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-lead-product-manager-token": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-lead-product-manager-token",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Lead Product Manager (Token)",
+        "description": "About the Role Circle is seeking a Lead Product Manager, Token within the Arc product team to define and lead the exploration of utility token opportunities for the Arc ecosystem. This individual will help Circle shape the economic model, governance framework, and feature design of a potential native token on the Arc network. You will work cross-functionally with Product, Business, Engineering, Data, Treasury, Legal, and Policy teams as we explore potential token design mechanisms from validator and staking models to community participation, incentive structures, and governance evolution.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/W36797Y9",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-legal-counsel": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-legal-counsel",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Legal Counsel",
+        "description": "Senior Counsel Remote (U.S. preferred) Intro We are building shared financial infrastructure that enables businesses to create and operate their own branded digital currencies. Our platform allows builders to customize key attributes such as branding, transfer logic, compliance frameworks, and incentive mechanisms.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/7XW47WV3",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-marketing-lead": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-marketing-lead",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Marketing Lead",
+        "description": "About the Role We position ourselves as end-to-end compliance infrastructure for fintechs and financial institutions across digital assets. This hire owns how that story lands. It is a full stack marketing role covering demand generation and narrative/brand, explicitly aimed at acquiring new customers.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/RYR579X6",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-principal-product-manager": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-principal-product-manager",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Principal Product Manager",
+        "description": "About the Role Circle is seeking a deeply technical and visionary Principal Product Manager to lead the strategy and end-to-end delivery of an AI-native platform. This role is pivotal in transforming our internal products & tools into a unified, composable platform that connects and scales seamlessly across all of Circle's internal systems and data services. You will oversee the design and development of various internal tools & data systems and partner with engineering leads to translate complex technical capabilities into a cohesive platform that accelerates our enterprise and unlocks new fo",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/W36797RW",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-protocol-lead": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-protocol-lead",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Protocol Lead",
+        "description": "About the Company We are building the standard for how regulated blockchain applications enforce transaction rules at the smart contract layer. We empower teams to create modular, programmable policies such as AML/CFT checks or offchain collateral requirements that are verified before a transaction executes onchain. Our system enforces these policies with cryptographic guarantees, providing robust, scalable risk management tailored to real-world use cases.",
+        "type": "contract",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/8X9V676V",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-react-native-engineer": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-react-native-engineer",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "React Native Engineer",
+        "description": "About the company Our client is building at the intersection of social crypto, prediction markets and accessible (fun) speculation. They have strong backing, real revenue and an incredibly exciting future. They are a pioneering platform that enables anyone to create a coin in under 1 minute for free.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/Y6V5RR69",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-backend-engineer-generalist": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-backend-engineer-generalist",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Backend Engineer (Generalist)",
+        "description": "Senior Backend Engineer (Generalist) Ellipsis Labs About Ellipsis Labs Ellipsis Labs is a profitable, venture-backed New York-based startup building differentiated products and infrastructure in decentralized finance. The company is the developer of Phoenix, the leading order book spot exchange on the Solana blockchain, and a top 10 DEX (decentralized exchange) with >$70B in volume since inception in 2023. Additionally, we are one of the most active and prominent on-chain market makers in crypto.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/5WRR694R",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-backend-engineer-risk-engineering": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-backend-engineer-risk-engineering",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Backend Engineer (Risk Engineering)",
+        "description": "About the Company Ellipsis Labs is a profitable, venture-backed New York-based startup building differentiated products and infrastructure in decentralized finance. The company is the developer of Phoenix, the leading order book spot exchange on the Solana blockchain, and a top 10 DEX (decentralized exchange) with >$70B in volume since inception in 2023. Additionally, we are one of the most active and prominent on-chain market makers in crypto.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/7XW47XV3",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-business-development-lead": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-business-development-lead",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Business Development Lead",
+        "description": "About the Company We are building the standard for seamless, real-time compliance enforcement for financial applications built on blockchains. We empower teams to create modular policy enforcement for anti-money laundering and sanctions compliance, enforced in real-time before transactions execute. Our system enforces these policies with cryptographic guarantees, providing robust, scalable risk management tailored to real-world use cases.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/X94X3Y4Y",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-principal-product-manager": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-principal-product-manager",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Principal Product Manager",
+        "description": "About Circle Circle sits at the forefront of digital money, bringing programmable, global, and instant value transfer to the internet through our infrastructure, including USDC-a blockchain-based dollar now core to payments, commerce, and markets worldwide. Our technology empowers businesses, institutions, and developers to capitalize on the breakthroughs of open blockchain networks, propelling financial innovation and economic inclusion at a truly global scale. About the Role We're seeking a Principal Product Manager, Ecosystem to drive new product initiatives with our Onchain Protocol team.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/3W66938V",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-product-manager": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-product-manager",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Product Manager",
+        "description": "About the Company We are the shared infrastructure where businesses launch their own branded stablecoins and financial institutions power them. Built on a common standard, every stablecoin on our platform is interoperable and liquid from day one — giving businesses programmable control over how money moves in their ecosystems, and giving financial institutions the most advanced issuance stack in the industry. About the Role We are seeking a Product Manager to own a core area of our platform end-to-end — and to be accountable not just for shipping it, but for scaling its adoption and revenue.",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote or unspecified",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/8X76Y63R",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-site-reliability-engineer": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-site-reliability-engineer",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Site Reliability Engineer",
+        "description": "About the Company Stellar is a decentralized, public blockchain that gives developers the tools to create experiences that are more like cash than crypto. The network is faster, cheaper, and far more energy-efficient than most blockchain-based systems. It's designed so Stellar's ecosystem can make a real-world, lasting impact.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/4RV3YXXV",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-software-engineer": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-software-engineer",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Software Engineer",
+        "description": "About the Company ﻿ ﻿﻿Circle is a global financial technology company at the forefront of the new internet of money. Our infrastructure—including USDC, a blockchain-based dollar—powers payments, commerce, and financial applications worldwide. We help businesses, institutions, and developers leverage breakthrough blockchain technologies to drive global economic prosperity and digital inclusion.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/W367977W",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-software-engineer-c": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-software-engineer-c",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Software Engineer, C++",
+        "description": "About the Company A leading decentralized infrastructure company is building one of the worlds most efficient public blockchain networks designed to enable developers to create applications that feel more like using cash than crypto. The platform provides high-speed, low-cost, and energy-efficient transactions, empowering developers and institutions to launch scalable, real-world financial applications on-chain. About the Role As a C++ Engineer , you'll work on the distributed systems and consensus engine at the core of a global blockchain network used by developers and institutions worldwide.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/5WWWV463",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-software-engineer-wallets": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-software-engineer-wallets",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior Software Engineer (Wallets)",
+        "description": "About Stellar Stellar is a decentralized, public blockchain that gives developers the tools to create experiences that are more like cash than crypto. The network is faster, cheaper, and far more energy-efficient than most blockchain-based systems. About the Role As part of the Wallet team, you will work on products that power the ecosystem of applications connecting end-users to the Stellar network.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/7XW7X4X3",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-senior-staff-backend-platform-engineer-finops-iam-blockchain": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-senior-staff-backend-platform-engineer-finops-iam-blockchain",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Senior/Staff Backend & Platform Engineer (FinOps, IAM & Blockchain)",
+        "description": "About the Role As a Senior / Staff Backend & Platform Engineer at Moonshot, you'll own some of the most critical systems in our stack:identity and access, funds movement and ledgering, and the blockchain infrastructure that powers our on-chain trading. This role is similar to staff engineers at leading crypto wallets and exchanges who own authentication stacks, key management, and high-scale financial backends. You'll design, build, and operate systems that must be both highly reliable and extremely secure, enabling product teams to move quickly on a solid foundation.",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, New York, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/63VWWX8R",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "techchain:techchain-talent-staff-software-engineer": {
+      "source": "techchain",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "techchain-talent-staff-software-engineer",
+        "company": "TechChain Talent",
+        "companyInitial": "T",
+        "companyColor": "#82b22a",
+        "title": "Staff Software Engineer",
+        "description": "About Our client is a global financial technology company at the forefront of the new internet of money. Our infrastructure including USDC, a blockchain-based dollar powers payments, commerce, and financial applications worldwide. We help businesses, institutions, and developers leverage breakthrough blockchain technologies to drive global economic prosperity and digital inclusion.",
+        "type": "full-time",
+        "featured": false,
+        "location": "San Francisco, California, United States",
+        "comp": "Not listed",
+        "url": "https://www.careers-page.com/techchaintalent/job/RY67564R",
+        "source": "careers-page.com/techchaintalent",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:fomo-controller": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "fomo-controller",
+        "company": "Fomo",
+        "companyInitial": "F",
+        "companyColor": "#b27e2a",
+        "title": "Controller",
+        "description": "Controller at Fomo",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY, USA",
+        "comp": "USD 190k-250k / year + Equity",
+        "url": "https://jobs.solana.com/companies/fomo-2-12bbd144-f1c8-44a3-bd2a-ed54a499ceea/jobs/89135812-controller#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:perle-freelance-transcriptionist-welsh": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "perle-freelance-transcriptionist-welsh",
+        "company": "Perle",
+        "companyInitial": "P",
+        "companyColor": "#b25c2a",
+        "title": "Freelance Transcriptionist - Welsh",
+        "description": "Freelance Transcriptionist - Welsh at Perle",
+        "type": "contract",
+        "featured": false,
+        "location": "Wales, UK",
+        "comp": "Not listed",
+        "url": "https://ats.rippling.com/perle/jobs/06a40806-11a9-4847-b672-5fc2349000ce?utm_source=Solana+Network+Opportunities+job+board&amp;utm_medium=getro.com&amp;gh_src=Solana+Network+Opportunities+job+board",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:ondo-finance-senior-security-engineer-product-security": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "ondo-finance-senior-security-engineer-product-security",
+        "company": "Ondo Finance",
+        "companyInitial": "O",
+        "companyColor": "#2ab22e",
+        "title": "Senior Security Engineer - Product Security",
+        "description": "Senior Security Engineer - Product Security at Ondo Finance",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/ondo-finance/jobs/89112618-senior-security-engineer-product-security#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:r3-senior-web3-sdet": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "r3-senior-web3-sdet",
+        "company": "R3",
+        "companyInitial": "R",
+        "companyColor": "#b2552a",
+        "title": "Senior Web3 SDET",
+        "description": "Senior Web3 SDET at R3",
+        "type": "full-time",
+        "featured": false,
+        "location": "Mumbai, Maharashtra, India",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/r3/jobs/88998682-senior-web3-sdet#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:perena-solana-protocol-engineer": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "perena-solana-protocol-engineer",
+        "company": "Perena",
+        "companyInitial": "P",
+        "companyColor": "#a92ab2",
+        "title": "Solana Protocol Engineer",
+        "description": "Solana Protocol Engineer at Perena",
+        "type": "full-time",
+        "featured": false,
+        "location": "International Falls, MN, USA",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/perena/jobs/88948124-solana-protocol-engineer#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:nasdaq-nasdaq-rwa-principal-protocol-engineer": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "nasdaq-nasdaq-rwa-principal-protocol-engineer",
+        "company": "Nasdaq",
+        "companyInitial": "N",
+        "companyColor": "#2ab299",
+        "title": "Nasdaq - RWA Principal Protocol Engineer",
+        "description": "Nasdaq - RWA Principal Protocol Engineer at Nasdaq",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY, USA",
+        "comp": "USD 155k-287k / year",
+        "url": "https://jobs.solana.com/companies/nasdaq/jobs/88889662-nasdaq-rwa-principal-protocol-engineer#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:nasdaq-nasdaq-product-manager-digital-assets-tokenization": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "nasdaq-nasdaq-product-manager-digital-assets-tokenization",
+        "company": "Nasdaq",
+        "companyInitial": "N",
+        "companyColor": "#2ab299",
+        "title": "Nasdaq - Product Manager, Digital Assets — Tokenization",
+        "description": "Nasdaq - Product Manager, Digital Assets — Tokenization at Nasdaq",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY, USA",
+        "comp": "USD 139k-149k / year",
+        "url": "https://jobs.solana.com/companies/nasdaq/jobs/88877488-nasdaq-product-manager-digital-assets-tokenization#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:jito-foundation-product-designer": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "jito-foundation-product-designer",
+        "company": "Jito Foundation",
+        "companyInitial": "J",
+        "companyColor": "#b26e2a",
+        "title": "Product Designer",
+        "description": "Product Designer at Jito Foundation",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote or unspecified",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/jito-foundation-2-b1eabcde-5e42-4696-9a1f-3c2e69aec9eb/jobs/88761332-product-designer#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:coinflow-labs-go-to-market-lead-europe": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "coinflow-labs-go-to-market-lead-europe",
+        "company": "Coinflow Labs",
+        "companyInitial": "C",
+        "companyColor": "#b2802a",
+        "title": "Go-to-Market Lead (Europe)",
+        "description": "Go-to-Market Lead (Europe) at Coinflow Labs",
+        "type": "full-time",
+        "featured": false,
+        "location": "Europe",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/coinflow-labs/jobs/88675764-go-to-market-lead-europe#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:squads-business-operations": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "squads-business-operations",
+        "company": "Squads",
+        "companyInitial": "S",
+        "companyColor": "#65b22a",
+        "title": "Business Operations",
+        "description": "Business Operations at Squads",
+        "type": "full-time",
+        "featured": false,
+        "location": "Europe",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/squads-2-f6fb25b1-e381-4b5c-ae8c-7d8b128601ff/jobs/88641660-business-operations#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:alchemy-controller": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "alchemy-controller",
+        "company": "Alchemy",
+        "companyInitial": "A",
+        "companyColor": "#b2842a",
+        "title": "Controller",
+        "description": "Controller at Alchemy",
+        "type": "full-time",
+        "featured": false,
+        "location": "San Francisco, CA, USA",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/alchemy-2/jobs/88624713-controller#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:blockworks-account-executive": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "blockworks-account-executive",
+        "company": "Blockworks",
+        "companyInitial": "B",
+        "companyColor": "#2a45b2",
+        "title": "Account Executive",
+        "description": "Account Executive at Blockworks",
+        "type": "full-time",
+        "featured": false,
+        "location": "United States",
+        "comp": "USD 100k-140k / year + Equity",
+        "url": "https://jobs.solana.com/companies/blockworks/jobs/88602717-account-executive#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:rain-fraud-risk-support-analyst": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "rain-fraud-risk-support-analyst",
+        "company": "Rain",
+        "companyInitial": "R",
+        "companyColor": "#2a69b2",
+        "title": "Fraud Risk Support Analyst",
+        "description": "Fraud Risk Support Analyst at Rain",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY, USA",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/rain/jobs/88589134-fraud-risk-support-analyst#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:rain-technical-support-analyst": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "rain-technical-support-analyst",
+        "company": "Rain",
+        "companyInitial": "R",
+        "companyColor": "#2a69b2",
+        "title": "Technical Support Analyst",
+        "description": "Technical Support Analyst at Rain",
+        "type": "full-time",
+        "featured": false,
+        "location": "Spain",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/rain/jobs/88397726-technical-support-analyst#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:flint-labs-marketing-lead": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "flint-labs-marketing-lead",
+        "company": "Flint Labs",
+        "companyInitial": "F",
+        "companyColor": "#7bb22a",
+        "title": "Marketing Lead",
+        "description": "Marketing Lead at Flint Labs",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote or unspecified",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/flint-labs/jobs/88558270-marketing-lead#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:flint-labs-full-stack-engineer": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "flint-labs-full-stack-engineer",
+        "company": "Flint Labs",
+        "companyInitial": "F",
+        "companyColor": "#7bb22a",
+        "title": "Full Stack Engineer",
+        "description": "Full Stack Engineer at Flint Labs",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote or unspecified",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/flint-labs/jobs/88558268-full-stack-engineer#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:flint-labs-quantitative-developer": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "flint-labs-quantitative-developer",
+        "company": "Flint Labs",
+        "companyInitial": "F",
+        "companyColor": "#7bb22a",
+        "title": "Quantitative Developer",
+        "description": "Quantitative Developer at Flint Labs",
+        "type": "full-time",
+        "featured": false,
+        "location": "Remote or unspecified",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/flint-labs/jobs/88558269-quantitative-developer#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:rain-senior-director-strategic-accounts": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "rain-senior-director-strategic-accounts",
+        "company": "Rain",
+        "companyInitial": "R",
+        "companyColor": "#2a69b2",
+        "title": "Senior Director, Strategic Accounts",
+        "description": "Senior Director, Strategic Accounts at Rain",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY, USA",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/rain/jobs/88397733-senior-director-strategic-accounts#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    },
+    "solana:rain-data-scientist-fraud-risk": {
+      "source": "solana",
+      "misses": 0,
+      "postedAt": "2026-08-07T18:42:59Z",
+      "job": {
+        "id": "rain-data-scientist-fraud-risk",
+        "company": "Rain",
+        "companyInitial": "R",
+        "companyColor": "#2a69b2",
+        "title": "Data Scientist - Fraud Risk",
+        "description": "Data Scientist - Fraud Risk at Rain",
+        "type": "full-time",
+        "featured": false,
+        "location": "New York, NY, USA",
+        "comp": "Not listed",
+        "url": "https://jobs.solana.com/companies/rain/jobs/88397734-data-scientist-fraud-risk#content",
+        "source": "jobs.solana.com/jobs",
+        "postedAt": "2026-08-07T18:42:59Z"
+      }
+    }
+  },
+  "lastRunAt": "2026-08-07T18:42:59Z",
+  "sourceStatus": {
+    "mempool": "disabled",
+    "college": "ok",
+    "web3-career": "ok",
+    "techchain": "ok",
+    "circle": "disabled",
+    "solana": "ok"
+  }
 }
