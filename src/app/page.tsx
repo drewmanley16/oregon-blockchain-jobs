@@ -122,7 +122,7 @@ export default function Home() {
             OREGON BLOCKCHAIN GROUP
           </div>
           <a
-            href="https://oregonblockchain.org"
+            href="/submit"
             className="border-2 border-[var(--line)] px-4 py-1.5 text-sm font-bold hover:bg-[var(--ink)] hover:text-[var(--bg)] transition-colors"
           >
             SUBMIT A ROLE →

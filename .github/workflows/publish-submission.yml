@@ -1,0 +1,46 @@
+name: Publish approved submission
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: publish-submission
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: >
+      github.event.label.name == 'approved' &&
+      contains(github.event.issue.labels.*.name, 'job-submission')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publish job to jobs.json
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: printf '%s' "$ISSUE_BODY" | python scripts/publish_submission.py
+      - run: python -m json.tool public/jobs.json >/dev/null
+      - name: Commit published listing
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/jobs.json
+          git commit -m "Publish submission: #${{ github.event.issue.number }}"
+          git push
+      - name: Close issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ github.event.issue.number }}" --body "Published to the board. Thanks for the submission!"
+          gh issue close "${{ github.event.issue.number }}"

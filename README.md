@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oregon Blockchain Group — Jobs
 
-## Getting Started
+Single-page job board for crypto/blockchain roles across Oregon and remote.
+Static Next.js site reading from `public/jobs.json`, kept fresh by a
+scheduled scraper and a public submission form.
 
-First, run the development server:
+Live at: https://oregon-blockchain-jobs.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## How data gets in
+
+1. **Scraper** (`scripts/scrape_jobs.py`) — runs on a schedule via
+   `.github/workflows/scrape-jobs.yml`, pulls from the sources listed in
+   `SCRAPER.md`, and commits the refreshed `public/jobs.json` back to `main`.
+   Vercel redeploys automatically on push.
+2. **Public submissions** — the `/submit` page posts to `/api/submit-job`,
+   which opens a GitHub issue labeled `job-submission` in this repo. Label
+   the issue `approved` and `.github/workflows/publish-submission.yml`
+   parses it and appends the job to `public/jobs.json` automatically, then
+   closes the issue.
+
+Both paths write the same `public/jobs.json` shape:
+
+```json
+{
+  "updatedAt": "ISO timestamp",
+  "jobs": [
+    {
+      "id": "unique-slug",
+      "company": "...", "companyInitial": "C", "companyColor": "#hex",
+      "title": "...", "description": "...",
+      "type": "internship" | "full-time" | "part-time" | "contract" | "fellowship",
+      "featured": false,
+      "location": "...", "comp": "...",
+      "url": "...", "source": "...", "postedAt": "ISO timestamp"
+    }
+  ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setting up submissions (one-time)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The submission API needs a GitHub token with permission to open issues on
+this repo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Go to https://github.com/settings/personal-access-tokens/new
+2. **Repository access**: "Only select repositories" → `oregon-blockchain-jobs`
+3. **Permissions** → Repository permissions → **Issues: Read and write**
+   (leave everything else at "No access")
+4. Generate the token and copy it
+5. Add it to Vercel:
+   ```bash
+   vercel env add SUBMISSION_GITHUB_TOKEN production
+   vercel env add SUBMISSION_GITHUB_TOKEN preview
+   vercel env add SUBMISSION_GITHUB_TOKEN development
+   vercel --prod   # redeploy so the new env var takes effect
+   ```
 
-## Learn More
+`SUBMISSION_REPO` is already set to `drewmanley16/oregon-blockchain-jobs`.
 
-To learn more about Next.js, take a look at the following resources:
+## Local development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open http://localhost:3000. The `/submit` form will return a 503 locally
+unless you also set `SUBMISSION_GITHUB_TOKEN` / `SUBMISSION_REPO` in
+`.env.local`.
 
-## Deploy on Vercel
+## Scraper
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `SCRAPER.md` for source classification and how to run it locally.
