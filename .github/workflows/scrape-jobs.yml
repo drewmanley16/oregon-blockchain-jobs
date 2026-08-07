@@ -1,6 +1,12 @@
 name: Refresh job listings
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/scrape_jobs.py
+      - requirements-scraper.txt
+      - .github/workflows/scrape-jobs.yml
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
