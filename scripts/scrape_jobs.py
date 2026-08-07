@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh public/jobs.json from public job boards every six hours."""
+"""Refresh public/jobs.json from public job boards."""
 from __future__ import annotations
 
 import argparse, colorsys, hashlib, json, logging, os, re, tempfile
@@ -109,17 +109,22 @@ def json_ld(soup: BeautifulSoup, source: Source) -> list[dict[str, Any]]:
 
 def scrape_college(source: Source) -> list[dict[str, Any]]:
     soup = BeautifulSoup(get(source.url).text, "html.parser")
-    links = {urljoin(source.url, a["href"]) for a in soup.select('a[href^="/careers/"]') if re.search(r"/careers/\d+/?$", a["href"])}
     jobs = []
-    for link in sorted(links):
-        detail = BeautifulSoup(get(link).text, "html.parser")
-        structured = json_ld(detail, source)
-        if structured: jobs.extend(structured); continue
-        title = clean(detail.find("h1"))
-        headings = [clean(h) for h in detail.find_all(["h2", "h3"])]
-        company = next((h for h in headings if h.lower() not in {"about", "about the role", "requirements", "responsibilities"}), "")
-        apply = next((a.get("href") for a in detail.find_all("a", href=True) if "apply" in clean(a).lower()), link)
-        job = normalize({"company": company, "title": title, "description": clean(detail), "url": apply}, source)
+    flight = ""
+    for script in soup.find_all("script"):
+        match = re.search(r"self\.__next_f\.push\((.*)\)$", script.string or "", re.S)
+        if not match: continue
+        try:
+            chunk = json.loads(match.group(1))
+            if len(chunk) > 1 and isinstance(chunk[1], str): flight += chunk[1]
+        except json.JSONDecodeError: continue
+    start = flight.find('[{"id":')
+    records = json.JSONDecoder().raw_decode(flight[start:])[0] if start >= 0 else []
+    for item in records:
+        if item.get("status") != "active": continue
+        company = (item.get("company") or {}).get("name")
+        description = item.get("description") or (item.get("metadata") or {}).get("descriptionLong")
+        job = normalize({"company": company, "title": item.get("name"), "description": description, "employment_type": item.get("role_type"), "location": item.get("location"), "comp": item.get("stipend"), "url": item.get("apply_link") or f"{source.url}/{item['id']}"}, source)
         if job: jobs.append(job)
     return jobs
 
@@ -132,7 +137,7 @@ def scrape_web3(source: Source) -> list[dict[str, Any]]:
     for row in soup.select("table tr"):
         cells, links = row.find_all("td"), row.find_all("a", href=True)
         if len(cells) < 2 or not links: continue
-        link = next((a for a in links if re.match(r"^/[^/]+-jobs?", a["href"])), None)
+        link = next((a for a in links if re.match(r"^/[^/]+/\d+/?$", a["href"])), None)
         if not link: continue
         title = clean(link); same_cell = cells[0].find_all("a")
         company = clean(same_cell[-1]) if len(same_cell) > 1 else clean(cells[0]).removeprefix(title).strip(" -")
